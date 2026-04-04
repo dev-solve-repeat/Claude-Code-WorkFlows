@@ -1,0 +1,18 @@
+# Environment & secrets
+.env
+credentials.json
+token.json
+
+# Intermediate/generated files
+.tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# macOS
+.DS_Store
