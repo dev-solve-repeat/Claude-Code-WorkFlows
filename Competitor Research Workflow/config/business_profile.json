@@ -1,0 +1,70 @@
+{
+  "company": {
+    "name": "Xpatz Global",
+    "description": "Helps blue-collar workers in India obtain work permits for European countries. Services include visa documentation, talent screening, Schengen visit visas, and business visas.",
+    "website": "https://xpatz.com",
+    "registration": "UK registered",
+    "offices": ["Dubai", "India"],
+    "model": "Fully digital"
+  },
+  "services": [
+    "Work permit documentation",
+    "Talent screening",
+    "Schengen visit visas",
+    "Business visas",
+    "Visa documentation support"
+  ],
+  "target_market": {
+    "geography": "India",
+    "segment": "Blue-collar workers",
+    "destination": "European countries"
+  },
+  "differentiators": [
+    "UK registered entity",
+    "Operations in Dubai and India",
+    "Global presence",
+    "Fully digital service delivery"
+  ],
+  "known_competitors": [
+    {
+      "name": "Y-Axis",
+      "website": "https://www.y-axis.com",
+      "id": "y-axis",
+      "notes": "One of India's largest immigration and visa consultancy companies"
+    },
+    {
+      "name": "Abhinav Immigration",
+      "website": "https://www.abhinav.com",
+      "id": "abhinav",
+      "notes": "Indian immigration consultancy offering overseas work visa services"
+    },
+    {
+      "name": "Visa Avenue",
+      "website": "https://www.visasavenue.com",
+      "id": "visa-avenue",
+      "notes": "India-based visa and immigration consultancy"
+    },
+    {
+      "name": "Xiphias Immigration",
+      "website": "https://www.xiphias.in",
+      "id": "xiphias",
+      "notes": "Immigration consultancy based in India offering Europe work visas"
+    },
+    {
+      "name": "Opulence Migration",
+      "website": "https://www.opulencemigration.com",
+      "id": "opulence",
+      "notes": "Indian immigration consultancy for overseas work opportunities"
+    }
+  ],
+  "analysis_config": {
+    "max_competitors": 8,
+    "search_queries": [
+      "overseas work permit visa consultancy India Europe",
+      "immigration consultancy India work visa Europe",
+      "visa agency India overseas employment Europe",
+      "work abroad visa services India immigration consultant"
+    ],
+    "review_platforms": ["Trustpilot", "Google Reviews"]
+  }
+}
