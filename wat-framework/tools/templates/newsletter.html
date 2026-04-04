@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="light" />
+  <title>{{ headline }}</title>
+  <style>
+    /* === Reset === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #F1F5F9;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1E293B;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* === Outer wrapper === */
+    .email-wrapper {
+      width: 100%;
+      background-color: #F1F5F9;
+      padding: 32px 16px;
+    }
+
+    /* === Card container === */
+    .email-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* === Top bar === */
+    .top-bar {
+      background-color: #1E3A8A;
+      padding: 14px 32px;
+      text-align: center;
+    }
+    .top-bar p {
+      color: #BFDBFE;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .top-bar a {
+      color: #93C5FD;
+      text-decoration: none;
+    }
+
+    /* === Hero image === */
+    .hero-image-wrap {
+      position: relative;
+      overflow: hidden;
+      max-height: 320px;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(30, 58, 138, 0.65), transparent);
+    }
+
+    /* === Header === */
+    .header {
+      background-color: #1E3A8A;
+      padding: 40px 40px 36px;
+      text-align: center;
+    }
+    .header-label {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #BFDBFE;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      color: #FFFFFF;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    .header-meta {
+      margin-top: 14px;
+      color: #93C5FD;
+      font-size: 13px;
+    }
+
+    /* === Body === */
+    .body-content {
+      padding: 40px 40px 0;
+    }
+
+    /* === Introduction === */
+    .intro {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #334155;
+      border-left: 4px solid #2563EB;
+      padding-left: 18px;
+      margin-bottom: 36px;
+    }
+
+    /* === Section === */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1E293B;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+    .section-body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #475569;
+    }
+    .section-body p {
+      margin-bottom: 12px;
+    }
+
+    /* === Key stat callout === */
+    .key-stat {
+      background: linear-gradient(135deg, #EFF6FF 0%, #F0FDF4 100%);
+      border: 1px solid #BFDBFE;
+      border-left: 4px solid #2563EB;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #1E40AF;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* === Chart block === */
+    .chart-block {
+      margin: 24px 0;
+      text-align: center;
+    }
+    .chart-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #E2E8F0;
+    }
+    .chart-caption {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #94A3B8;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* === Divider === */
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #CBD5E1, transparent);
+      margin: 8px 0 40px;
+    }
+
+    /* === Conclusion === */
+    .conclusion {
+      background-color: #F8FAFC;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 0 40px 40px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #334155;
+    }
+    .conclusion-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2563EB;
+      margin-bottom: 10px;
+    }
+
+    /* === CTA === */
+    .cta-block {
+      text-align: center;
+      padding: 0 40px 40px;
+    }
+    .cta-description {
+      font-size: 14px;
+      color: #64748B;
+      margin-bottom: 16px;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #2563EB;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    /* === Footer === */
+    .footer {
+      background-color: #1E293B;
+      padding: 32px 40px;
+      text-align: center;
+    }
+    .footer p {
+      color: #94A3B8;
+      font-size: 12px;
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+    .footer a {
+      color: #7DD3FC;
+      text-decoration: none;
+    }
+    .footer-attribution {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #334155;
+      font-size: 11px;
+      color: #64748B;
+    }
+    .footer-attribution a {
+      color: #64748B;
+    }
+
+    /* === Mobile === */
+    @media only screen and (max-width: 600px) {
+      .email-wrapper { padding: 0; }
+      .email-card { border-radius: 0; }
+      .header { padding: 28px 24px 24px; }
+      .header h1 { font-size: 22px; }
+      .body-content { padding: 28px 24px 0; }
+      .conclusion { margin: 0 24px 28px; padding: 20px; }
+      .cta-block { padding: 0 24px 28px; }
+      .footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+  <div class="email-card">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <p>Your Newsletter &nbsp;|&nbsp; {{ issue_date }}</p>
+    </div>
+
+    <!-- Hero image (optional) -->
+    {% if hero_image %}
+    <div class="hero-image-wrap">
+      <img src="{{ hero_image.url }}" alt="{{ hero_image.alt }}" width="640" />
+      <div class="hero-overlay"></div>
+    </div>
+    {% endif %}
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-label">Newsletter</div>
+      <h1>{{ headline }}</h1>
+      <p class="header-meta">{{ issue_date }} &nbsp;·&nbsp; {{ read_time }} min read</p>
+    </div>
+
+    <!-- Body content -->
+    <div class="body-content">
+
+      <!-- Introduction -->
+      <p class="intro">{{ introduction }}</p>
+
+      <!-- Sections -->
+      {% for section in sections %}
+      <div class="section">
+        <h2 class="section-title">{{ section.title }}</h2>
+
+        <div class="section-body">
+          {% for paragraph in section.body_paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+
+        {% if section.key_stat %}
+        <div class="key-stat">
+          {{ section.key_stat }}
+        </div>
+        {% endif %}
+
+        {% if section.chart %}
+        <div class="chart-block">
+          <img src="{{ section.chart.src }}" alt="{{ section.chart.title }}" width="560" />
+          {% if section.chart.caption %}
+          <p class="chart-caption">{{ section.chart.caption }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if not loop.last %}
+      <div class="divider"></div>
+      {% endif %}
+      {% endfor %}
+
+    </div><!-- /body-content -->
+
+    <!-- Conclusion -->
+    <div class="conclusion">
+      <div class="conclusion-label">Takeaway</div>
+      <p>{{ conclusion }}</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <p class="cta-description">{{ cta.description }}</p>
+      <a href="#" class="cta-button">{{ cta.text }}</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>You're receiving this because you subscribed to our newsletter.</p>
+      <p><a href="#">Unsubscribe</a></p>
+      {% if image_attribution_html %}
+      <div class="footer-attribution">
+        {{ image_attribution_html }}
+      </div>
+      {% endif %}
+    </div>
+
+  </div><!-- /email-card -->
+</div><!-- /email-wrapper -->
+</body>
+</html>
