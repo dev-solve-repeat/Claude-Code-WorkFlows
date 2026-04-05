@@ -1,0 +1,18 @@
+{
+  "channels": [
+    {"name": "Matt Wolfe",        "channel_id": "UChpleBmo18P08aKCIgti38g"},
+    {"name": "Andrej Karpathy",   "channel_id": "UCbfYPyITQ-7l4upoX8nvctg"},
+    {"name": "Two Minute Papers", "channel_id": "UCYO_jab_esuFRV4b17AJtAw"},
+    {"name": "Fireship",          "channel_id": "UCsBjURrPoezykLs9EqgamOA"},
+    {"name": "AI Explained",      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw"},
+    {"name": "The AI Advantage",  "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"},
+    {"name": "Wes Roth",          "channel_id": "UCqcbQf6yw5KzRoDDcZ_wBSw"},
+    {"name": "AI Jason",          "channel_id": "UCrXSVX9a1mj8l0CMLwKgMVw"},
+    {"name": "David Shapiro",     "channel_id": "UCddiUEpeqJcYeBxX1IVBKvQ"},
+    {"name": "Lex Fridman",       "channel_id": "UCSHZKyawb77ixDdsGog4iWA"}
+  ],
+  "fetch_config": {
+    "videos_per_channel": 10,
+    "published_after_days": 14
+  }
+}

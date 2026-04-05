@@ -1,0 +1,10 @@
+# YouTube scraping (no API key required)
+yt-dlp>=2024.1.0
+
+# Slide generation
+python-pptx>=1.0.0
+matplotlib>=3.8.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
