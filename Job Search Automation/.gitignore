@@ -1,0 +1,10 @@
+.env
+.tmp/
+input/
+output/
+data/scraped_jobs_registry.json
+credentials.json
+token.json
+__pycache__/
+*.pyc
+.DS_Store
